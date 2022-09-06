@@ -30,3 +30,23 @@
 // export default WithFavoriteNumber;
 
 /// END OF CHALLENGE - HOC ///
+
+
+/// SECOND LESSON - Higher Order Components ///
+
+import React from "react";
+import Menu from "./Menu.jsx";
+import Favorite from "./Favorite.jsx";
+
+function App(props) {
+    return (
+        <div>
+            <Menu />
+            <hr />
+            <Favorite />
+        </div>
+    )
+};
+export default App;
+
+/// SECOND LESSON - Higher Order Components ///
