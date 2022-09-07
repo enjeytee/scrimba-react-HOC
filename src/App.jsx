@@ -39,6 +39,7 @@ import Menu from "./Menu.jsx";
 import Favorite from "./Favorite.jsx";
 
 function App(props) {
+    
     return (
         <div>
             <Menu />
