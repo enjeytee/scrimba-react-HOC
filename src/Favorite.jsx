@@ -1,30 +1,24 @@
 /// SECOND LESSON - Higher Order Components ///
 
 import React from "react";
+import { withToggler } from "./HOCs/withToggler.jsx";
 
-export default class Favorite extends React.Component {
-    state = {
-        isFavorited: false
-    };
-    toggleFavorite = () => {
-        this.setState(prevState => {
-            return { isFavorited: !prevState.isFavorited }
-        });
-    };
+class Favorite extends React.Component {
     render() {
         return(
             <div>
                 <h3>Click heart to favorite</h3>
                 <h1>
                     <span
-                        onClick={this.toggleFavorite}
+                        onClick={this.props.toggle}
                     >
-                        {this.state.isFavorited ? "❤️" : "♡"}
+                        {this.props.on ? "❤️" : "♡"}
                     </span>
                 </h1>
             </div>
         );
     };
 };
+export default withToggler(Favorite, {defaultOnValue: false});
 
 /// END OF SECOND LESSON - Higher Order Components ///
